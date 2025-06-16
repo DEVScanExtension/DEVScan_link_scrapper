@@ -1,0 +1,54 @@
+{
+  "name": "DEVScan Link Capturing",
+  "description": "Trial 1 for DEVScan Link Capturing in the Webpage",
+  "version": "1.0",
+  "manifest_version": 3,
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "run_at": "document_start"
+  }
+],
+
+  "action": {
+    "default_icon": {
+      "16": "icon.jpg",
+      "48": "icon.jpg",
+      "128": "icon.jpg"
+    },
+    "default_title": "DEVScan",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "16": "icon.jpg",
+    "48": "icon.jpg",
+    "128": "icon.jpg"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "scripting",
+    "webRequest",
+    "notifications",
+    "alarms"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}
