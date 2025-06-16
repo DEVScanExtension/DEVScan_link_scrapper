@@ -17,21 +17,6 @@
   }
 ],
 
-  "action": {
-    "default_icon": {
-      "16": "icon.jpg",
-      "48": "icon.jpg",
-      "128": "icon.jpg"
-    },
-    "default_title": "DEVScan",
-    "default_popup": "popup.html"
-  },
-
-  "icons": {
-    "16": "icon.jpg",
-    "48": "icon.jpg",
-    "128": "icon.jpg"
-  },
 
   "permissions": [
     "activeTab",
